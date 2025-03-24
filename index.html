@@ -46,20 +46,46 @@
         </div>
       </header>
 
-      <main class="container1">
+      <main class="mdl-layout__content">
         <div class="right-image">
           <img src="./images/triangle-with-letters.png" alt="triangle image" />
+          <img src="./images/triangle-with-numbers.png" alt="triangle image" />
         </div>
-        <main class="container2">
-          <div class="right-image">
-            <img
-              src="./images/triangle-with-numbers.png"
-              alt="triangle image"
+        <br />
+        <div class="page-content">
+          <h5>Enter the length of side in cm.</h5>
+        </div>
+        <br />
+        <br />
+        <form>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="side-of-triangle"
             />
+            <label class="mdl-textfield__label" for="side-of-triangle"
+              >Side of triangle (cm)</label
+            >
+            <span class="mdl-textfield__error">Input is not a number.</span>
           </div>
           <br />
+          <button
+            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            onclick="calculateAreaOfTriangle()"
+            type="button"
+          >
+            Calculate
+          </button>
+        </form>
+        <br />
+        <div class="page-content-answer">
+          <div id="area"></div>
+        </br>
+        </br>
           <div class="page-content">
-            <h5>Enter the base and height in cm.</h5>
+            <h5>Enter length of "a" in cm.</h5>
           </div>
           <br />
           <br />
@@ -69,31 +95,27 @@
                 class="mdl-textfield__input"
                 type="text"
                 pattern="-?[0-9]*(\.[0-9]+)?"
-                id="base-of-triangle"
+                id="side-of-triangleA"
               />
-              <label class="mdl-textfield__label" for="base-of-triangle"
-                >Base of triangle (cm)</label
+              <label class="mdl-textfield__label" for="side-of-triangleA"
+                >Side "a" of triangle (cm)</label
               >
               <span class="mdl-textfield__error">Input is not a number.</span>
             </div>
             <br />
-            <div class="mdl-textfield mdl-js-textfield">
-              <!-- input pattern attribute -->
-              <input
-                class="mdl-textfield__input"
-                type="text"
-                pattern="-?[0-9]*(\.[0-9]+)?"
-                id="height-of-triangle"
-              />
-              <!-- mdl-textfield__label -->
-              <label class="mdl-textfield__label" for="height-of-triangle"
-                >Height of triangle (cm)</label
-              >
-              <!-- class "mdl-textfield__error" -->
-              <span class="mdl-textfield__error">Input is not a number.</span>
-            </div>
+            <button
+              class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+              onclick="calculatePerimeterOfTriangleA()"
+              type="button"
+            >
+              Calculate
+            </button>
           </form>
-        </main>
+          <br />
+          <div class="page-content-answerA">
+            <div id="area"></div>
+          </div>
+        </div>
       </main>
     </div>
   </body>
