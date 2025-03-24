@@ -4,9 +4,25 @@
 // Created on: Sep 2020
 // This file contains the JS functions for index.html
 
+"use strict"
 /**
- * Displays an alert with the message "Hello, World!"
+ * Do basic math.
  */
-function myButtonClicked() {
-  alert("Hello, World!")
+function doMathClicked() {
+  document.getElementById("add-math").innerHTML =
+    "<p>The perimeter is: " + (5 + 5 + 5) + " cm</p>"
+}
+
+/**
+ * This function calculates perimeter of a triangle A.
+ */
+function calculatePerimeterOfA() {
+  // input
+  const sideOfA = parseFloat(document.getElementById("side-of-A").value)
+  // process (corrected formula)
+  const PerimeterOfA = sideOfA + sideOfA + sideOfA
+
+  // output
+  document.getElementById("perimeterAAA").innerHTML =
+    "Perimeter is: " + PerimeterOfA + "cm"
 }
