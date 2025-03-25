@@ -24,5 +24,5 @@ function calculatePerimeterOfA() {
 
   // output
   document.getElementById("perimeterAAA").innerHTML =
-    "Perimeter is: " + PerimeterOfA + "cm"
+    "Perimeter is: " + PerimeterOfA + " cm"
 }
